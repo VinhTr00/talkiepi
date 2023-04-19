@@ -27,6 +27,7 @@ func (b *Talkiepi) initGPIO() {
 	b.Button = gpio.NewInput(ButtonPin)
 	go func() {
 		for {
+			/*
 			currentState, err := b.Button.Read()
 
 			if currentState != b.ButtonState && err == nil {
@@ -43,7 +44,10 @@ func (b *Talkiepi) initGPIO() {
 				}
 
 			}
-
+			*/
+			if b.Stream != nil {
+				b.TransmitStart()
+			}
 			time.Sleep(500 * time.Millisecond)
 		}
 	}()
