@@ -10,6 +10,6 @@ sudo systemctl start mumble.service
 
 sudo systemctl daemon-reload
 
-echo "Completed"
-
-echo "###########################"
+echo "###############################"
+echo "### Setup Service Completed ###"
+echo "###############################"
