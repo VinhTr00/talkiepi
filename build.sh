@@ -1,7 +1,17 @@
 #!/bin/bash
 
-go build -o /home/rtr/bin/talkiepi cmd/talkiepi/main.go 
+go build -o /home/rtr/bin/talkiepi cmd/talkiepi/main.go &>> temp.log
+value = $(<temp.log)
 
-echo "#######################"
-echo "### Build Completed ###"
-echo "#######################"
+if [$value];
+then
+    echo "#######################"
+    echo "### Build Failed ###"
+    echo "#######################"
+else 
+    echo "#######################"
+    echo "### Build Completed ###"
+    echo "#######################"
+fi
+
+: > temp.txt
