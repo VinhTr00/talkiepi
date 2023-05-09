@@ -1,30 +1,30 @@
 package talkiepi
 
 import (
-	"fmt"
+	//"fmt"
 	"time"
 
 	"github.com/dchote/gpio"
-	"github.com/stianeikeland/go-rpio"
+	//"github.com/stianeikeland/go-rpio"
 )
 
 func (b *Talkiepi) initGPIO() {
 	// we need to pull in rpio to pullup our button pin
-	if err := rpio.Open(); err != nil {
-		fmt.Println(err)
-		b.GPIOEnabled = false
-		return
-	} else {
-		b.GPIOEnabled = true
-	}
+	// if err := rpio.Open(); err != nil {
+	// 	fmt.Println(err)
+	// 	b.GPIOEnabled = false
+	// 	return
+	// } else {
+	// 	b.GPIOEnabled = true
+	// }
 
-	ButtonPinPullUp := rpio.Pin(ButtonPin)
-	ButtonPinPullUp.PullUp()
+	// ButtonPinPullUp := rpio.Pin(ButtonPin)
+	// ButtonPinPullUp.PullUp()
 
-	rpio.Close()
+	// rpio.Close()
 
 	// unfortunately the gpio watcher stuff doesnt work for me in this context, so we have to poll the button instead
-	b.Button = gpio.NewInput(ButtonPin)
+	//b.Button = gpio.NewInput(ButtonPin)
 	go func() {
 		for {
 			/*
@@ -53,9 +53,9 @@ func (b *Talkiepi) initGPIO() {
 	}()
 
 	// then we can do our gpio stuff
-	b.OnlineLED = gpio.NewOutput(OnlineLEDPin, false)
-	b.ParticipantsLED = gpio.NewOutput(ParticipantsLEDPin, false)
-	b.TransmitLED = gpio.NewOutput(TransmitLEDPin, false)
+	//b.OnlineLED = gpio.NewOutput(OnlineLEDPin, false)
+	//b.ParticipantsLED = gpio.NewOutput(ParticipantsLEDPin, false)
+	//b.TransmitLED = gpio.NewOutput(TransmitLEDPin, false)
 }
 
 func (b *Talkiepi) LEDOn(LED gpio.Pin) {
