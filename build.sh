@@ -1,8 +1,8 @@
 #!/bin/bash
-export GOPATH=/home/rtr/gocode
-export GOBIN=/home/rtr/bin
+export GOPATH=/home/$USER/gocode
+export GOBIN=/home/$USER/bin
 
-go build -o /home/rtr/bin/talkiepi cmd/talkiepi/main.go &> temp.log
+go build -o /home/$USER/bin/talkiepi cmd/talkiepi/main.go &> temp.log
 
 value=$(<temp.log)
 length_value=${#value}

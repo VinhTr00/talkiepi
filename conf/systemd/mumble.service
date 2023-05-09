@@ -4,10 +4,10 @@ Requires = systemd-user-sessions.service network.target sound.target
 After = multi-user.target
 
 [Service]
-User = rtr  
-Group = rtr  
+User = $USER  
+Group = $USER 
 Type = simple  
-ExecStart = /home/rtr/bin/talkiepi
+ExecStart = /home/$USER/bin/talkiepi
 Restart = always 
 RestartSec = 5
 
