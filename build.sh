@@ -1,13 +1,11 @@
 #!/bin/bash
+
 export GOPATH=/home/$USER/gocode
 export GOBIN=/home/$USER/bin
 
-go build -o /home/$USER/bin/talkiepi cmd/talkiepi/main.go &> temp.log
+value=$(go build -o /home/$USER/bin/talkiepi cmd/talkiepi/main.go 2>&1)
 
-value=$(<temp.log)
-length_value=${#value}
-
-if [ $length_value = 0 ];
+if [ "$value" == "" ];
 then
     echo "#######################"
     echo "### Build Completed ###"
@@ -18,4 +16,3 @@ else
     echo "#######################"
     echo $value
 fi
-
