@@ -1,9 +1,9 @@
 #!/bin/bash
 
-export GOPATH=/home/$USER/gocode
-export GOBIN=/home/$USER/bin
+export GOPATH=~/Documents/code-talkiepi/gocode
+export GOBIN=~/Documents/code-talkiepi/bin
 
-value=$(go build -o /home/$USER/bin/talkiepi cmd/talkiepi/main.go 2>&1)
+value=$(go build -o ~/Documents/code-talkiepi/bin/talkiepi cmd/talkiepi/main.go 2>&1)
 
 if [ "$value" == "" ];
 then

@@ -7,7 +7,7 @@ After = multi-user.target
 User = $USER  
 Group = $USER 
 Type = simple  
-ExecStart = /home/$USER/bin/talkiepi
+ExecStart = /home/$USER/code-talkiepi/bin/talkiepi -server 192.168.0.217:64738 -username rtr-t30
 Restart = always 
 RestartSec = 5
 
