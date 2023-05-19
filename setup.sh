@@ -6,7 +6,7 @@ sudo cp ~/Documents/code-talkiepi/gocode/src/github.com/VinhTr00/talkiepi/conf/s
 
 sudo cp ~/Documents/code-talkiepi/gocode/src/github.com/VinhTr00/talkiepi/conf/systemd/restart_mumble.service /etc/systemd/system/restart_mumble.service
 
-sudo cp ~/Documents/code-talkiepi/gocode/src/github.com/VinhTr00/talkiepi/conf/systemd/restart-mumble.sh /usr/bin/restart_mumble.sh
+sudo cp ~/Documents/code-talkiepi/gocode/src/github.com/VinhTr00/talkiepi/conf/systemd/restart_mumble.sh /usr/bin/restart_mumble.sh
 
 sudo chmod +x  /usr/bin/restart_mumble.sh
 
