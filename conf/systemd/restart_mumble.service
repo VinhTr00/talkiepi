@@ -1,10 +1,10 @@
 [Unit]
 Description = Restart Mumble Service  
 Requires = systemd-user-sessions.service network.target sound.target mumble.service
-After = mumble.service
+After = multi-user.target
 
 [Service]
-User = rtr
+User = root
 ExecStart = /usr/bin/restart_mumble.sh
 Restart = always 
 RestartSec = 30
