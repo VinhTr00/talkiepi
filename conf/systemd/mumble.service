@@ -7,7 +7,7 @@ After = multi-user.target
 User = rtr
 Group = rtr
 Type = simple  
-ExecStart = /home/rtr/Documents/code-talkiepi/bin/talkiepi -server 192.168.0.217:64738 -username rtr-t30
+ExecStart = /home/rtr/Documents/code-talkiepi/bin/talkiepi -server 192.168.0.216:64738 -username rtr
 Restart = always 
 RestartSec = 5
 

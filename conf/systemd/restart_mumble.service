@@ -1,6 +1,6 @@
 [Unit]
 Description = Restart Mumble Service  
-Requires = systemd-user-sessions.service network.target sound.target mumble.service
+Requires = systemd-user-sessions.service network.target sound.target
 After = multi-user.target
 
 [Service]
