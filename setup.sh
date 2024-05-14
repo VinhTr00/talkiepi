@@ -1,9 +1,9 @@
 #!/bin/bash
 
 echo "Create mumble.service"
-
 sudo cp ~/Documents/code-talkiepi/gocode/src/github.com/VinhTr00/talkiepi/conf/systemd/mumble.service /etc/systemd/system/mumble.service
 
+echo "Create restart_mumble.service"
 sudo cp ~/Documents/code-talkiepi/gocode/src/github.com/VinhTr00/talkiepi/conf/systemd/restart_mumble.service /etc/systemd/system/restart_mumble.service
 
 sudo cp ~/Documents/code-talkiepi/gocode/src/github.com/VinhTr00/talkiepi/conf/systemd/restart_mumble.sh /usr/bin/restart_mumble.sh
